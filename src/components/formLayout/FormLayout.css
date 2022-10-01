@@ -19,6 +19,7 @@
 .form-container{
     width: calc(100vw - 5rem);
     height: calc(100vh - 5rem);
+    padding: 2rem;
     background-color: #fff;
     border-radius: 1rem;
 }
