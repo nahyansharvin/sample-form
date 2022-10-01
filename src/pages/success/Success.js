@@ -7,7 +7,7 @@ function Success() {
     const {user} = useContext(UserContext);
   return (
     <div className="success">
-        <h1>Thank You For Submitting The Form .</h1>
+        <h1>Thank You For Submitting The Form {user.name}.</h1>
     </div>
   )
 }
