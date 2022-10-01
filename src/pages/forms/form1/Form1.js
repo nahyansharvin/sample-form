@@ -1,5 +1,7 @@
 import React,{ useState, useContext } from 'react'
 import '../../Forms.css'
+import { useNavigate } from 'react-router-dom'
+
 
 //Matrial UI
 import { Grid, Button } from '@mui/material'
@@ -10,6 +12,7 @@ import UserContext from '../../../UserContext'
 
 function Form1() {
     const {user, setUser} = useContext(UserContext);
+    const navigate = useNavigate();
 
     //States
     const [name, setName] = useState()
@@ -25,7 +28,13 @@ function Form1() {
 
     //handle next button
     const handleNextButton = () => {
-
+        if(!name || !phoneNo || !email) {
+            setError();
+            return;
+        }else{
+            setUser({...user, name, phoneNo, email});
+            navigate('/form/next');
+        }
     }
 
     
@@ -39,13 +48,13 @@ function Form1() {
                     <TextInput label="Name" value={name} setValue={setName} />                
                 </Grid>
                 <Grid item xs={12}>
-                    <TextInput label="Phone Number" value={phoneNo} setValue={setPhoneNo} />                
+                    <TextInput label="Phone Number" type='Number' value={phoneNo} setValue={setPhoneNo} />                
                 </Grid>
                 <Grid item xs={12}>
-                    <TextInput label="Email" value={email} setValue={setEmail} />                
+                    <TextInput label="Email" type='Email' value={email} setValue={setEmail} />                
                 </Grid>
                 <Grid item xs={12}>
-                    <Button variant="contained" color="primary" fullWidth>Next</Button>
+                    <Button variant="contained" color="primary" fullWidth onClick={handleNextButton}>Next</Button>
                 </Grid>
                 
             </Grid>
