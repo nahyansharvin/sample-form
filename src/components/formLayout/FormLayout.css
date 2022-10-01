@@ -1,0 +1,24 @@
+.form-layout{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cae1f4;
+    color: #2b2b2b;
+}
+
+.form-layout-title{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #264259;
+    margin-bottom: 1rem;
+}
+
+.form-container{
+    width: calc(100vw - 5rem);
+    height: calc(100vh - 5rem);
+    background-color: #fff;
+    border-radius: 1rem;
+}

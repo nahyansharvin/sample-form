@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
+//Context
+import { UserContextProvider } from './UserContext';
+
+//Pages
+import FormLayout from './components/formLayout/FormLayout';
+import Form1 from './pages/forms/form1/Form1';
+import Form2 from './pages/forms/form2/Form2';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <UserContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" >
+            <Route path="form/" element={<FormLayout />} >
+              <Route index element={<Form1 />} />
+              <Route path="next" element={<Form2 />} />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </UserContextProvider>
+      
     </div>
   );
 }
