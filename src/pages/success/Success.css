@@ -1,0 +1,14 @@
+.success{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+    color: #2f4f69;
+}
+
+.success h1{
+    font-size: 2rem;
+    font-weight: 400;
+}
