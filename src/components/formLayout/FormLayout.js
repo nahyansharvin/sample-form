@@ -8,7 +8,7 @@ function FormLayout() {
         <>
             <div className="form-layout">
                 <div className="form-layout-title">
-                    <h2>Please Enter Your Details Below.</h2>
+                    <h2>Please Enter Your Details.</h2>
                 </div>
                 <div className="form-container">
                     <Outlet />

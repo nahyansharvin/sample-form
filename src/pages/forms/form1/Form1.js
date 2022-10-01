@@ -1,4 +1,4 @@
-import React,{ useState, useContext } from 'react'
+import React,{ useState, useContext, useEffect } from 'react'
 import '../../Forms.css'
 import { useNavigate } from 'react-router-dom'
 
@@ -25,6 +25,20 @@ function Form1() {
         if(!phoneNo) setPhoneNo("");
         if(!email) setEmail("");
     }
+
+    //To set current values in field
+    const setValues = (details) => {
+        if(!details) return;
+        setName(details.name);
+        setPhoneNo(details.phoneNo);
+        setEmail(details.email);
+    }
+    useEffect(() => {
+        setValues(user);
+    }, [])
+    
+
+
 
     //handle next button
     const handleNextButton = () => {

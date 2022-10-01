@@ -5,22 +5,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #cae1f4;
-    color: #2b2b2b;
+    background-color: var(--background-color);
+    
 }
 
 .form-layout-title{
     font-size: 1rem;
     font-weight: 700;
-    color: #264259;
-    margin-bottom: 1rem;
+    color: #2f4f69;
+    margin: 1rem 0;
+}
+.form-layout-title h2{
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .form-container{
     margin: 0 1rem;
     max-width: 600px;
-    height: calc(100vh - 5rem);
+    min-height: 600px;
     padding: 2rem;
     background-color: #fff;
     border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
