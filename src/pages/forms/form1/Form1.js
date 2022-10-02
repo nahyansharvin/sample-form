@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import '../../Forms.css'
 import { useNavigate } from 'react-router-dom'
 
@@ -34,49 +34,15 @@ function Form1() {
     const navigate = useNavigate();
 
     const formik = useFormik({
-        initialValues: {
-            name: '',
-            phoneNo: '',
-            email: '',
-        },
+        initialValues: user,
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            // alert(JSON.stringify(values, null, 2));
             setUser({ ...user, name: values.name, phoneNo: values.phoneNo, email: values.email });
             
             console.log(user);
             navigate('/form/next');
         },
     });
-
-   
-    //To set current values in field
-    const setValues = (details) => {
-        if (!details) return;
-        // setName(details.name);
-        // setPhoneNo(details.phoneNo);
-        // setEmail(details.email);
-    }
-    useEffect(() => {
-        setValues(user);
-    }, [])
-
-
-
-
-    //handle next button
-    // const handleNextButton = () => {
-    //     if(!name || !phoneNo || !email) {
-    //         setError();
-    //         return;
-    //     }else{
-    //         setUser({...user, name, phoneNo, email});
-    //         navigate('/form/next');
-    //     }
-    // }
-
-
-
 
 
     return (

@@ -32,52 +32,14 @@ function Form2() {
   const navigate = useNavigate();
 
   const formik = useFormik({
-    initialValues: {
-      location: '',
-      age: '',
-      university: '',
-    },
+    initialValues: user,
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      // alert(JSON.stringify(values, null, 2));
       setUser({ ...user, location: values.location, age: values.age, university: values.university });
       navigate('/success');
     },
   });
 
-  // //States
-  // const [location, setLocation] = useState()
-  // const [age, setAge] = useState()
-  // const [university, setUniversity] = useState()
-
-  // //Set error in empty fields
-  // const setError = () => {
-  //   if (!location) setLocation("");
-  //   if (!age) setAge("");
-  //   if (!university) setUniversity("");
-  // }
-
-  // //To set current values in field
-  // const setValues = (details) => {
-  //   if (!details) return;
-  //   setLocation(details.location);
-  //   setAge(details.age);
-  //   setUniversity(details.university);
-  // }
-  // useEffect(() => {
-  //   setValues(user);
-  // }, [])
-
-  // //handle Submit button
-  // const handleSubmitButton = () => {
-  //   if (!location || !age || !university) {
-  //     setError();
-  //     return;
-  //   } else {
-  //     setUser({ ...user, location, age, university });
-  //     navigate('/success');
-  //   }
-  // }
 
   return (
     <div className="form-wrapper">
