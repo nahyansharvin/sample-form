@@ -15,7 +15,7 @@ function App() {
       <UserContextProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="form/" element={<FormLayout />} >
+            <Route path="sample-form/" element={<FormLayout />} >
               <Route index element={<Form1 />} />
               <Route path="2" element={<Form2 />} />
             </Route>

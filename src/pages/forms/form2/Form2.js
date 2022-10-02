@@ -45,7 +45,7 @@ function Form2() {
     <div className="form-wrapper">
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <Button variant="text" startIcon={<ArrowBackIosIcon />} size="small" sx={{ color: "#2b2b2b", fontWeight: "bold" }} onClick={() => navigate("/form/")} >Back</Button>
+          <Button variant="text" startIcon={<ArrowBackIosIcon />} size="small" sx={{ color: "#2b2b2b", fontWeight: "bold" }} onClick={() => navigate("/sample-form/")} >Back</Button>
         </Grid>
         <Grid item xs={12}>
           <TextField
