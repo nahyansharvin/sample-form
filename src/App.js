@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="form/" element={<FormLayout />} >
               <Route index element={<Form1 />} />
-              <Route path="next" element={<Form2 />} />
+              <Route path="2" element={<Form2 />} />
             </Route>
             <Route path="success" element={<Success />} />
           </Routes>

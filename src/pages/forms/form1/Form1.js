@@ -40,7 +40,7 @@ function Form1() {
             setUser({ ...user, name: values.name, phoneNo: values.phoneNo, email: values.email });
             
             console.log(user);
-            navigate('/form/next');
+            navigate('/form/2');
         },
     });
 
