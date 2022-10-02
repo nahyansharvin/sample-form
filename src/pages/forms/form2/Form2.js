@@ -15,7 +15,8 @@ import UserContext from '../../../UserContext';
 const validationSchema = yup.object({
   location: yup
     .string()
-    .required('Location is required'),
+    .required('Location is required')
+    .matches(/^[aA-zZ\s]+$/, "Location must not contain numbers or special characters"),
   age: yup
     .string()
     .required('Age is required')
@@ -23,7 +24,8 @@ const validationSchema = yup.object({
     .max(4, 'Enter a valid age'),
   university: yup
     .string()
-    .required('University is required'),
+    .required('University is required')
+    .matches(/^[aA-zZ\s]+$/, "University must not contain numbers or special characters"),
 });
 
 function Form2() {

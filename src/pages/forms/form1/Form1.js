@@ -15,7 +15,8 @@ import UserContext from '../../../UserContext'
 const validationSchema = yup.object({
     name: yup
         .string()
-        .required('Name is required'),
+        .required('Name is required')
+        .matches(/^[aA-zZ\s]+$/, "Name must not contain numbers or special characters"),
     phoneNo: yup
         .string()
         .required('Phone number is required')
