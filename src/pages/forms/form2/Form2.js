@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import '../../Forms.css'
 import { useNavigate } from 'react-router-dom'
 
 //Form validators
