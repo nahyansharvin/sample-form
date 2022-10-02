@@ -65,7 +65,7 @@ function Form1() {
                     <TextField
                         fullWidth
                         required
-                        type="Number"
+                        type="tel"
                         id="phoneNo"
                         name="phoneNo"
                         label="Phone Number"

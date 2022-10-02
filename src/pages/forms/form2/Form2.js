@@ -18,10 +18,11 @@ const validationSchema = yup.object({
     .required('Location is required')
     .matches(/^[aA-zZ\s]+$/, "Location must not contain numbers or special characters"),
   age: yup
-    .string()
+    .number()
     .required('Age is required')
-    .matches(/^[0-9]+$/, "Must be only digits")
-    .max(4, 'Enter a valid age'),
+    .typeError('Age must be a number')
+    .min(1, 'Age must be greater than 0')
+    .max(100, 'Enter a valid age'),
   university: yup
     .string()
     .required('University is required')
@@ -65,7 +66,7 @@ function Form2() {
           <TextField
             fullWidth
             required
-            type="Number"
+            type="number"
             id="age"
             name="age"
             label="Age"
