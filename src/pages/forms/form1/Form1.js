@@ -38,8 +38,6 @@ function Form1() {
         validationSchema: validationSchema,
         onSubmit: (values) => {
             setUser({ ...user, name: values.name, phoneNo: values.phoneNo, email: values.email });
-            
-            console.log(user);
             navigate('/sample-form/2');
         },
     });
